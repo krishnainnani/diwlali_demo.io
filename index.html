@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple VR Demo</title>
+
+    <!-- A-Frame Library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- VR Scene -->
+    <a-scene>
+      <!-- 360 Background Image -->
+      <a-sky src="./images/space_panoramic.jpg"></a-sky>
+
+      <!-- <a-sky radius="100">
+        <video id="vrBackgroundVideo" autoplay loop="true" src="./images/your_360_video.mp4"></video>
+        <a-image src="#vrBackgroundVideo" rotation="0 0 0" position="0 0 0" width="1" height="1" repeat="repeat"></a-image>
+        </a-sky> -->
+
+      <!-- 3D Box -->
+      <!-- <a-box 
+        position="0 1.5 -3" 
+        rotation="0 45 45" 
+        color="#4CC3D9" 
+        animation="property: rotation; to: 0 405 405; loop: true; dur: 5000">
+      </a-box> -->
+
+      <!-- Floor -->
+      <!-- <a-plane 
+        position="0 0 -4" 
+        rotation="-90 0 0" 
+        width="10" 
+        height="10" 
+        color="#7BC8A4">
+      </a-plane> -->
+
+      <a-video 
+        src="#sampleVideo" 
+        position="0 1.5 -3" 
+        width="4" 
+        height="2.5" 
+        rotation="0 0 0" 
+        play-on-click>
+      </a-video>
+
+      <!-- Video Asset -->
+      <a-assets>
+        <video id="sampleVideo" src="./images/Jethalal happy diwali song for whatsapp status.mp4" loop="true" autoplay="false"></video>
+      </a-assets>
+
+
+
+      <!-- Camera -->
+      <a-camera position="0 1.6 0"></a-camera>
+    </a-scene>
+  </body>
+</html>
